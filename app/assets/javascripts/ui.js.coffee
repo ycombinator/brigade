@@ -1,7 +1,14 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
-
 $(document).ready ->
-  $('#app-spinner dl').hover ->
-    $(this).animate({'opacity':'0.6'})
+
+  $('.appset').toggle (->
+    $(this).animate
+      width: "400px"
+      height: "140px"
+      'z-index': "999"
+    , 200
+  ), ->
+    $(this).animate
+      width: "65px";
+      height: "16px";
+      'z-index': "40"
+    , 200

@@ -59,6 +59,70 @@ section#app-spinner {
   }
 }
 
+#int-map {
+  background: url('/assets/map.png') center center no-repeat;
+  height: 400px;
+  position: relative;
+
+  .appset {
+    position: absolute;
+    font-family: 'Avenir Medium', Helvetica, Arial, sans-serif;
+    color: lighten($lime, 50%);
+    background: lighten($lime, 10%);
+    @include border-radius(3px);
+    padding: 5px;
+    cursor: pointer;
+    width: 65px;
+    height: 16px;
+    z-index: 40;
+
+    &:before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #fff;
+      @include border-radius(40px);
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
+
+    &.no-gc {
+      &:before {
+        content: "";
+        display: none;
+      }
+    }
+
+    &:hover {
+      @include box-shadow(0 3px 5px #333);
+    }
+
+    /* Just randomizing a few of these */
+
+    &#foo {
+      bottom: 140px;
+      left: 0px;
+    }
+    &#sf {
+      bottom: 180px;
+      left: -30px;
+    }
+    &#sd {
+      bottom: 220px;
+      left: -20px;
+    }
+    &#bar {
+      bottom: 190px;
+      right: 100px;
+    }
+    &#bat {
+      top: 200px;
+      right: 230px;
+    }
+  }
+}
+
 .button {
   background: #f7941d;
   @include border-radius(3px);
