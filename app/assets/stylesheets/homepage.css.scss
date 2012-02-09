@@ -72,30 +72,13 @@ section#app-spinner {
     @include border-radius(3px);
     padding: 5px;
     cursor: pointer;
-    width: 65px;
-    height: 16px;
     z-index: 40;
+    border: 1px solid darken($lime, 10%);
+    @include box-shadow(1px 1px 0 darken($lime, 15%));
 
-    &:before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      background: #fff;
-      @include border-radius(40px);
-      position: absolute;
-      top: -5px;
-      right: -5px;
-    }
-
-    &.no-gc {
-      &:before {
-        content: "";
-        display: none;
-      }
-    }
-
-    &:hover {
-      @include box-shadow(0 3px 5px #333);
+    strong {
+      font-family: 'Avenir Heavy', Helvetica, Arial, sans-serif;
+      font-weight: bold;
     }
 
     /* Just randomizing a few of these */
