@@ -74,7 +74,8 @@ section#app-spinner {
     cursor: pointer;
     z-index: 40;
     border: 1px solid darken($lime, 10%);
-    @include box-shadow(1px 1px 0 darken($lime, 15%));
+    @include box-shadow(1px 1px 0 darken($lime, 15%), 0 0 3px lighten($lime, 25%) inset);
+    text-shadow: 0 -1px 0 darken($lime, 5%);
 
     strong {
       font-family: 'Avenir Heavy', Helvetica, Arial, sans-serif;
